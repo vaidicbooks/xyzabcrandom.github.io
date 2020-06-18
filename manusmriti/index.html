@@ -16,14 +16,14 @@
           <div class="row">
             <div class="row">
                 <div class="column0">
-                  <div class="container" style="width:600px;">
+                  <div class="container">
                     <div id="adhyay-select">
-                      <select name="country" id="country" class="box1">
+                      <select name="अध्याय" id="अध्याय" class="box1">
                          <option value="">अध्याय चुने</option>
                       </select>
                     </div>
                     <div id="shlok-select">
-                      <select name="state" id="state" onchange="location = this.value;" class="box2">
+                      <select name="श्लोक" id="श्लोक" onchange="location = this.value;" class="box2">
                         <option value="">श्लोक चुने</option>
                       </select>
                     </div>
@@ -98,16 +98,16 @@
 <script>
 $(document).ready(function(){
 
-  load_json_data('country');
+  load_json_data('अध्याय');
 
   function load_json_data(id, parent_id)
   {
     var html_code = '';
     $.getJSON("adhyay_shloka.json", function(data){
 
-      html_code += '<option value="">Select '+id+'</option>';
+      html_code += '<option value="">'+id+' चुनें</option>';
       $.each(data, function(key, value){
-        if(id == 'country')
+        if(id == 'अध्याय')
         {
           if(value.parent_id == '0')
           {
@@ -127,36 +127,32 @@ $(document).ready(function(){
 
   }
 
-  $(document).on('change', '#country', function(){
-    var country_id = $(this).val();
-    if(country_id != '')
+  $(document).on('change', '#अध्याय', function(){
+    var अध्याय_id = $(this).val();
+    if(अध्याय_id != '')
     {
-      load_json_data('state', country_id);
+      load_json_data('श्लोक', अध्याय_id);
     }
     else
     {
-      $('#state').html('<option value="">Select state</option>');
+      $('#श्लोक').html('<option value="">श्लोक चुनें</option>');
       $('#city').html('<option value="">Select city</option>');
     }
   });
-  $(document).on('change', '#state', function(){
-    var state_id = $(this).val();
-    if(state_id != '')
+  $(document).on('change', '#श्लोक', function(){
+    var श्लोक_id = $(this).val();
+    if(श्लोक_id != '')
     {
-      load_json_data('city', state_id);
+      load_json_data('city', श्लोक_id);
     }
     else
     {
       $('#city').html('<option value="">Select city</option>');
     }
   });
- $(document).on('change', '#city', () => {
-    var country = $("#country").val();
-    var state = $("#state").val();
-    var city = $(this).val();
-    window.location.href = `${country}/${state}/${city}.html`;
-});
 });
 </script>
+  </body>
+</HTML>
   </body>
 </HTML>
