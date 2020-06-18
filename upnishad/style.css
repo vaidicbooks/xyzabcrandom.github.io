@@ -1,0 +1,544 @@
+* {
+        box-sizing: border-box;
+      }
+/* Fonts */
+@font-face {
+        font-family: NotoSans;
+        src: url (https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap);
+}
+.row::after {
+        content: "";
+        clear: both;
+        display: table;
+}
+.row {
+  padding-bottom: 1000px;
+}
+.column1 {
+        float: left;
+        width: 50%;
+        padding: 30px;
+}
+#name {
+        font-family: jura;
+        font-size:20px;
+        position:absolute;
+        color:#FB4949;
+        top:4%;
+        left:6%;
+        text-align: center;
+}
+#imp-btn {
+        position:absolute;
+        top:6%;
+        right:10%;
+        border: 1px solid #000000;
+        border-radius: 12px;
+        background-color: white;
+        padding: 10px 30px;
+        font-size: 15px;
+}
+#imp-btn:hover {
+       background-color: teal;
+       border: 1px solid teal;
+       color: white;
+}
+/* Header ends */
+
+.column2 {
+       float: left;
+       width: 14.285714285714285714285714285714%;
+       padding: 30px;
+       top: 20%;
+}
+#ved-btn {
+       position: absolute;
+       top: 20%;
+       left: 02%;
+       border: 1px solid black;
+       border-radius: 10px;
+       background-color: white;
+       padding: 10px 30px;
+       color: black;
+       font-size: 15px;
+       cursor: pointer;
+}
+#upnishad-btn {
+       position: absolute;
+       top: 20%;
+       border: 1px solid #f4511e;
+       border-radius: 10px;
+       background-color: #f4511e;
+       padding: 10px 30px;
+       color: black;
+       font-size: 15px;
+       cursor: pointer;
+}
+#ved-btn:hover {
+       background-color: #f4511e;
+       border: 1px solid #f4511e;
+
+}
+#darshan-btn {
+       position: absolute;
+       top: 20%;
+       border: 1px solid black;
+       border-radius: 10px;
+       background-color: white;
+       padding: 10px 30px;
+       color: black;
+       font-size: 15px;
+       cursor: pointer;
+}
+#darshan-btn:hover {
+       background-color: #f4511e;
+       border: 1px solid #f4511e;
+       
+}
+#manusmriti-btn {
+       position: absolute;
+       top: 20%;
+       border: 1px solid black;
+       border-radius: 10px;
+       background-color: white;
+       padding: 10px 30px;
+       color: black;
+       font-size: 15px;
+       cursor: pointer;
+}
+#manusmriti-btn:hover {
+       background-color: #f4511e;
+       border: 1px solid #f4511e;
+       
+}
+#adhunik-btn {
+       position: absolute;
+       top: 20%;
+       border: 1px solid black;
+       border-radius: 10px;
+       background-color: white;
+       padding: 10px 30px;
+       color: black;
+       font-size: 15px;
+       cursor: pointer;
+}
+#adhunik-btn:hover {
+       background-color: #f4511e;
+       border: 1px solid #f4511e;
+       
+}
+#lekh-btn {
+       position: absolute;
+       top: 20%;
+       border: 1px solid black;
+       border-radius: 10px;
+       background-color: white;
+       padding: 10px 30px;
+       color: black;
+       font-size: 15px;
+       cursor: pointer;
+}
+#lekh-btn:hover {
+       background-color: #f4511e;
+       border: 1px solid #f4511e;
+       
+}
+#english-btn {
+       position: absolute;
+       top: 20%;
+       border: 1px solid black;
+       border-radius: 10px;
+       background-color: white;
+       padding: 10px 30px;
+       color: black;
+       font-size: 15px;
+       cursor: pointer;
+}
+#english-btn:hover {
+       background-color: #f4511e;
+       border: 1px solid #f4511e;
+       
+}
+/* Upnishad Buttons */
+.column3 {
+      float: left;
+      width: 25%;
+      padding: 30px;
+}
+.column4 {
+      float: left;
+      width: 25%;
+      padding: 30px;
+}
+.column5 {
+      float: left;
+      width: 33.33%;
+      padding: 30px;
+}
+#isha-btn {
+      position: absolute;
+      top: 35%;
+      background-color: #ff9933;
+      color: white;
+      border: 2px solid #ff9933;
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 300px;
+      height: 250px;
+      max-width: 300px;
+      max-height: 250px;
+      font-size: 20px;
+      font-family: NotoSans;
+      cursor: pointer;
+}
+#isha-btn:hover {
+      background-color: red;
+      border: 2px solid red;
+}
+#keno-btn {
+      position: absolute;
+      top: 35%;
+      background-color: #ff9933;
+      color: white;
+      border: 2px solid #ff9933;
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 300px;
+      height: 250px;
+      max-width: 300px;
+      max-height: 250px;
+      font-size: 20px;
+      font-family: NotoSans;
+      cursor: pointer;
+}
+#keno-btn:hover {
+      background-color: red;
+      border: 2px solid red;
+}
+#ketho-btn {
+      position: absolute;
+      top: 35%;
+      background-color: #ff9933;
+      color: white;
+      border: 2px solid #ff9933;
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 300px;
+      height: 250px;
+      max-width: 300px;
+      max-height: 250px;
+      font-size: 20px;
+      font-family: NotoSans;
+      cursor: pointer;
+}
+#ketho-btn:hover {
+      background-color: red;
+      border: 2px solid red;
+}
+#prashn-btn {
+      position: absolute;
+      top: 35%;
+      background-color: #ff9933;
+      color: white;
+      border: 2px solid #ff9933;
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 300px;
+      height: 250px;
+      max-width: 300px;
+      max-height: 250px;
+      font-size: 20px;
+      font-family: NotoSans;
+      cursor: pointer;
+}
+#prashna-btn:hover {
+      background-color: red;
+      border: 2px solid red;
+}
+#mundak-btn {
+      position: absolute;
+      top: 85%;
+      background-color: #ff9933;
+      color: white;
+      border: 2px solid #ff9933;
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 300px;
+      height: 250px;
+      max-width: 300px;
+      max-height: 250px;
+      font-size: 20px;
+      font-family: NotoSans;
+      cursor: pointer;
+}
+#mundak-btn:hover {
+      background-color: red;
+      border: 2px solid red;
+}
+#mandukya-btn {
+      position: absolute;
+      top: 85%;
+      background-color: #ff9933;
+      color: white;
+      border: 2px solid #ff9933;
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 300px;
+      height: 250px;
+      max-width: 300px;
+      max-height: 250px;
+      font-size: 20px;
+      font-family: NotoSans;
+      cursor: pointer;
+}
+#mandukya-btn:hover {
+      background-color: red;
+      border: 2px solid red;
+}
+#aitrey-btn {
+      position: absolute;
+      top: 85%;
+      background-color: #ff9933;
+      color: white;
+      border: 2px solid #ff9933;
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 300px;
+      height: 250px;
+      max-width: 300px;
+      max-height: 250px;
+      font-size: 20px;
+      font-family: NotoSans;
+      cursor: pointer;
+}
+#aitrey-btn:hover {
+      background-color: red;
+      border: 2px solid red;
+}
+#taitriy-btn {
+      position: absolute;
+      top: 85%;
+      background-color: #ff9933;
+      color: white;
+      border: 2px solid #ff9933;
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 300px;
+      height: 250px;
+      max-width: 300px;
+      max-height: 250px;
+      font-size: 20px;
+      font-family: NotoSans;
+      cursor: pointer;
+}
+#taitriy-btn:hover {
+      background-color: red;
+      border: 2px solid red;
+}
+#shweta-btn {
+      position: absolute;
+      top: 135%;
+      background-color: #ff9933;
+      color: white;
+      border: 2px solid #ff9933;
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 300px;
+      height: 250px;
+      max-width: 300px;
+      max-height: 250px;
+      font-size: 20px;
+      font-family: NotoSans;
+      cursor: pointer;
+}
+#shweta-btn:hover {
+      background-color: red;
+      border: 2px solid red;
+}
+#brihda-btn {
+      position: absolute;
+      top: 135%;
+      background-color: #ff9933;
+      color: white;
+      border: 2px solid #ff9933;
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 300px;
+      height: 250px;
+      max-width: 300px;
+      max-height: 250px;
+      font-size: 20px;
+      font-family: NotoSans;
+      cursor: pointer;
+}
+#brihda-btn:hover {
+      background-color: red;
+      border: 2px solid red;
+}
+#chandogya-btn {
+      position: absolute;
+      top: 135%;
+      background-color: #ff9933;
+      color: white;
+      border: 2px solid #ff9933;
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 300px;
+      height: 250px;
+      max-width: 300px;
+      max-height: 250px;
+      font-size: 20px;
+      font-family: NotoSans;
+      cursor: pointer;
+}
+#chandogya-btn:hover {
+      background-color: red;
+      border: 2px solid red;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 500px) {
+        .column1 {
+          width: 100%;
+          padding: 15px;
+        }
+        .row {
+          padding-bottom: 1000px;
+        }
+        #name {
+          position: absolute;
+          font-size: 40px;
+          top: 1%;
+          left: 17%
+        }
+        #imp-btn {
+          top: 17%;
+          left: 12%;
+          padding: 8px 100px;
+          align: center;
+          border-radius: 50px;
+        }
+        #central-elements {
+          text-align: center;
+          display: inline-block;
+        }
+        /* Header ends list Starts */
+        .column2 {
+       float: left;
+       width: 25%;
+       padding: 30px;
+       top: 20%;
+       }
+       #ved-btn {
+        top: 30%;
+        padding: 7px 15px; 
+       }
+       #upnishad-btn {
+        top: 30%;
+        left: 20%;
+        padding: 7px 15px;
+       }
+       #darshan-btn {
+        top: 30%;
+        padding: 7px 15px;
+        left: 45%;
+       }
+       #manusmriti-btn {
+        top: 30%;
+        left: 75%;
+        padding: 7px 15px;
+       }
+       #adhunik-btn {
+        top: 40%;
+        padding: 7px 15px;
+       }
+       #lekh-btn {
+        top: 40%;
+        left: 50%;
+        padding: 7px 15px;
+       }
+       #english-btn {
+        top: 40%;
+        left: 75%;
+        padding: 7px 15px;
+       }
+       /*Ved Buttins*/
+       .column3 {
+        float: bottom;
+        width: 100%;
+        padding: 30px;
+       }
+       .column4 {
+        float: left;
+        width: 100%;
+        padding: 30px;
+      }
+      .column5 {
+        float: left;
+        width: 100%;
+        padding: 30px;
+      }
+       #isha-btn {
+        position: absolute;
+        top: 50%;
+       }
+       #keno-btn {
+        position: absolute;
+        top: 90%;
+       }
+       #ketho-btn {
+        position: absolute;
+        top: 130%
+       }
+       #prashn-btn {
+        position: absolute;
+        top: 170%;
+        padding-bottom: 40px;
+       }
+       #mundak-btn {
+        position: absolute;
+        top: 210%;
+        padding-bottom: 40px;
+       }
+       #mandukya-btn {
+        position: absolute;
+        top: 250%;
+        padding-bottom: 40px;
+       }
+       #aitrey-btn {
+        position: absolute;
+        top: 290%;
+        padding-bottom: 40px;
+       }
+       #taitriy-btn {
+        position: absolute;
+        top: 330%;
+        padding-bottom: 40px;
+       }
+       #shweta-btn {
+        position: absolute;
+        top: 370%;
+        padding-bottom: 40px;
+       }
+       #brihda-btn {
+        position: absolute;
+        top: 410%;
+        padding-bottom: 40px;
+       }
+       #chandogya-btn {
+        position: absolute;
+        top: 450%;
+        padding-bottom: 40px;
+       }
+       .footer {
+        display: none;
+       }

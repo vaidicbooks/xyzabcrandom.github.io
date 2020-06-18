@@ -1,0 +1,162 @@
+<HTML>
+  <head>
+       <title>मनुस्मृति - वैदिक पुस्तकें </title>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta charset="UTF-8">
+       <link rel="stylesheet" type="text/css" href="style.css">
+       <script src="jquery.min.js"></script>
+       <script src="bootstrap.min.js"></script>
+       <!-- Font Linking Start-->
+       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+       <!-- Font Linking Ends -->
+
+  </head>
+
+  <body bgcolor="#FFF5DA">
+          <div class="row">
+            <div class="row">
+                <div class="column0">
+                  <div class="container" style="width:600px;">
+                    <div id="adhyay-select">
+                      <select name="country" id="country" class="box1">
+                         <option value="">अध्याय चुने</option>
+                      </select>
+                    </div>
+                    <div id="shlok-select">
+                      <select name="state" id="state" onchange="location = this.value;" class="box2">
+                        <option value="">श्लोक चुने</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              <div class="column1">
+                   <div id="central-elements"><a href="../"><p id="name"><strong>वैदिक पुस्तकें</strong></p></a></div>
+              </div>
+              <div class="column1">
+                   <div id="central-elements"><a href="important"><button id="imp-btn"><strong>प्रारंभ से पूर्व</strong></button></a></div>
+              </div>
+              <!-- List for Navigation staets -->
+              <div class="column2">
+                   <div><a href="../"><button id="ved-btn">वेद</button></a></div>
+              </div>
+              <div class="column2">
+                   <div><a href=""><button id="upnishad-btn">उपनिषद्</button></a></div>
+              </div>
+              <div class="column2">
+                   <div><a href="../darshan"><button id="darshan-btn">दर्शन शास्त्र</button></a></div>
+              </div>
+              <div class="column2">
+                   <div><a href="../manusmriti"><button id="manusmriti-btn">मनुस्मृति</button></a></div>
+              </div>
+              <div class="column2">
+                   <div><a href="../adhunik"><button id="adhunik-btn">आधुनिक पुस्तकें</button></a></div>
+              </div>
+              <div class="column2">
+                   <div><a href="../lekh"><button id="lekh-btn">लेख</button></a></div>
+              </div>
+              <div class="column3">
+                   <div><a href="1"><button id="isha-btn"><p><h2 style="color:white">सृष्टि एवं धर्मोत्पत्ति विषय</h3></p></button></a></div>
+              </div>
+              <div class="column3">
+                   <div><a href="2"><button id="keno-btn"><p><h2 style="color:white">संस्कार एवं ब्रह्मचर्य आश्रम</h3></p></button></a></div>
+              </div>
+              <div class="column3">
+                   <div><a href="3"><button id="ketho-btn"><p><h2 style="color:white">समावर्तन, विवाह एवं पञ्चयज्ञविधान-विधान</h3></p></button></a></div>
+              </div>
+              <div class="column3">
+                   <div><a href="4"><button id="prashn-btn"><p><h2 style="color:white">गृह्स्थान्तर्गत आजीविका एवं व्रत विषय </h3></p></button></a></div>
+              </div>
+              <div class="column4">
+                   <div><a href="5"><button id="mundak-btn"><p><h2 style="color:white">गृहस्थान्तर्गत-भक्ष्याभक्ष्य-देहशुद्धि-द्रव्यशुद्धि-स्त्रीधर्म विषय </h3></p></button></a></div>
+              </div>
+              <div class="column4">
+                   <div><a href="6"><button id="mandukya-btn"><p><h2 style="color:white">वानप्रस्थ-सन्यासधर्म विषय </h3></p></button></a></div>
+              </div>
+              <div class="column4">
+                   <div><a href="7"><button id="aitrey-btn"><p><h2 style="color:white">राजधर्म विषय </h3></p></button></a></div>
+              </div>
+              <div class="column4">
+                   <div><a href="8"><button id="taitriy-btn"><p><h2 style="color:white">राजधर्मान्तर्गत व्यवहार-निर्णय </h3></p></button></a></div>
+              </div>
+              <div class="column5">
+                   <div><a href="9"><button id="shweta-btn"><p><h2 style="color:white">राज धर्मान्तर्गत व्यवहार निर्णय </h3></p></button></a></div>
+              </div>
+              <div class="column5">
+                   <div><a href="10"><button id="brihda-btn"><p><h2 style="color:white">चातुर्वर्ण्य  धर्मान्तर्गत वैश्य शुद्र के धर्म एवं चातुर्वर्ण्य  धर्म का  उपसंहार </h3></p></button></a></div>
+              </div>
+              <div class="column5">
+                   <div><a href="11"><button id="chandogya-btn"><p><h2 style="color:white">प्रायश्चित विषय </h3></p></button></a></div>
+              </div>
+              <div class="column5">
+                   <div><a href="12"><button id="chandogya2-btn"><p><h2 style="color:white"> कर्मफल विधान एवं निःश्रेयस कर्मों का वर्णन </h3></p></button></a></div>
+              </div>
+          </div>
+          <div class="footer">
+             <strong>वैदिक पुस्तकें २०२०</strong>
+          </div>
+
+<script>
+$(document).ready(function(){
+
+  load_json_data('country');
+
+  function load_json_data(id, parent_id)
+  {
+    var html_code = '';
+    $.getJSON("adhyay_shloka.json", function(data){
+
+      html_code += '<option value="">Select '+id+'</option>';
+      $.each(data, function(key, value){
+        if(id == 'country')
+        {
+          if(value.parent_id == '0')
+          {
+            html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+          }
+        }
+        else
+        {
+          if(value.parent_id == parent_id)
+          {
+            html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+          }
+        }
+      });
+      $('#'+id).html(html_code);
+    });
+
+  }
+
+  $(document).on('change', '#country', function(){
+    var country_id = $(this).val();
+    if(country_id != '')
+    {
+      load_json_data('state', country_id);
+    }
+    else
+    {
+      $('#state').html('<option value="">Select state</option>');
+      $('#city').html('<option value="">Select city</option>');
+    }
+  });
+  $(document).on('change', '#state', function(){
+    var state_id = $(this).val();
+    if(state_id != '')
+    {
+      load_json_data('city', state_id);
+    }
+    else
+    {
+      $('#city').html('<option value="">Select city</option>');
+    }
+  });
+ $(document).on('change', '#city', () => {
+    var country = $("#country").val();
+    var state = $("#state").val();
+    var city = $(this).val();
+    window.location.href = `${country}/${state}/${city}.html`;
+});
+});
+</script>
+  </body>
+</HTML>
