@@ -399,25 +399,25 @@
        }
        #sankhya-btn {
         position: absolute;
-        top: 90%;
+        top: 100%;
        }
        #vedant-btn {
         position: absolute;
-        top: 130%
+        top: 150%
        }
        #vaisheshik-btn {
         position: absolute;
-        top: 170%;
+        top: 200%;
         padding-bottom: 40px;
        }
        #yog-btn {
         position: absolute;
-        top: 210%;
+        top: 250%;
         padding-bottom: 40px;
        }
        #meemansa-btn {
         position: absolute;
-        top: 250%;
+        top: 300%;
         padding-bottom: 40px;
        }
        .footer {

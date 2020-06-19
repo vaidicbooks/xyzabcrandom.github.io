@@ -191,7 +191,7 @@
       font-family: NotoSans;
       cursor: pointer;
 }
-#isha-btn:hover {
+#isha:hover {
       background-color: red;
       border: 2px solid red;
 }
@@ -493,50 +493,50 @@
        }
        #keno-btn {
         position: absolute;
-        top: 90%;
+        top: 100%;
        }
        #ketho-btn {
         position: absolute;
-        top: 130%
+        top: 150%
        }
        #prashn-btn {
         position: absolute;
-        top: 170%;
+        top: 200%;
         padding-bottom: 40px;
        }
        #mundak-btn {
         position: absolute;
-        top: 210%;
+        top: 250%;
         padding-bottom: 40px;
        }
        #mandukya-btn {
         position: absolute;
-        top: 250%;
+        top: 300%;
         padding-bottom: 40px;
        }
        #aitrey-btn {
         position: absolute;
-        top: 290%;
+        top: 350%;
         padding-bottom: 40px;
        }
        #taitriy-btn {
         position: absolute;
-        top: 330%;
+        top: 400%;
         padding-bottom: 40px;
        }
        #shweta-btn {
         position: absolute;
-        top: 370%;
+        top: 450%;
         padding-bottom: 40px;
        }
        #brihda-btn {
         position: absolute;
-        top: 410%;
+        top: 500%;
         padding-bottom: 40px;
        }
        #chandogya-btn {
         position: absolute;
-        top: 450%;
+        top: 550%;
         padding-bottom: 40px;
        }
        .footer {

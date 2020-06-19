@@ -254,7 +254,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
         .column1 {
           width: 100%;
           padding: 15px;
@@ -328,16 +328,15 @@
        }
        #yajurved-btn {
         position: absolute;
-        top: 90%;
+        top: 100%;
        }
        #samved-btn {
         position: absolute;
-        top: 130%
+        top: 150%
        }
        #atharvved-btn {
         position: absolute;
-        top: 170%;
-        padding-bottom: 40px;
+        top: 200%;
        }
        .footer {
         display: none;
