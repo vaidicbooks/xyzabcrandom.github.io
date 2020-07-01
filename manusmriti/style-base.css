@@ -1,0 +1,178 @@
+* {
+        box-sizing: border-box;
+      }
+/* Fonts */
+@font-face {
+        font-family: NotoSans;
+        src: url (https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap);
+}
+.box1 {
+  width: 392.5px;
+  height: 64px;
+  border: 0px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-family: NotoSans;
+  padding-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(selector.svg) no-repeat;
+}
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+display: none;
+}
+.box2 {
+  width: 392.5px;
+  height: 64px;
+  border: 0px;
+  position: relative;
+  left: 5%;
+  border-radius: 12px;
+  font-size: 20px;
+  font-family: NotoSans;
+  padding-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(selector.svg) no-repeat;
+}
+
+select::-ms-expand {
+display: none;
+}
+
+.column0 {
+        float: center;
+        width: 100%;
+        padding: 30px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute;
+    top: 32%;
+    left: 17%;
+}
+
+
+.row::after {
+        content: "";
+        clear: both;
+        display: table;
+}
+
+#name {
+    font-family: jura;
+    font-size:40px;
+    position:absolute;
+    color:red;
+    top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.column-shloka {
+	width: 100%;
+	position: absolute;
+	top: 60%;
+}
+.column1{
+	position: absolute;
+	top: 3%;
+	width: 100%;
+}
+#shloka-cont {
+	margin: 0;
+	position: absolute;
+	top: 10%;
+  left: 50%;
+  -ms-transform: translate(-50%, -90%);
+  transform: translate(-50%, -50%);
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: NotoSans;
+}
+
+.column-arth {
+	width: 100%;
+	position: absolute;
+	top: 80%;
+}
+#arth-cont {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: NotoSans;
+}
+
+@media screen and (max-width: 500px) {
+        .column0 {
+          width: 100%;
+          padding: 15px;
+          height: 500px;
+        }
+        #name {
+        	font-size: 21px;
+        }
+        .container {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          top: 15%
+        }
+        .box2 {
+          height: 45px;
+          width: 200px;
+          border-radius: 10px;
+          font-size: 15px;
+          padding-bottom: 10px;
+          background: url(selector-mobile.svg) no-repeat;
+          position: relative;
+          top: 5%;
+          left: 0%;
+        }
+        .box1 {
+          height: 45px;
+          width: 200px;
+          border-radius: 10px;
+          font-size: 15px;
+          padding-bottom: 10px;
+          background: url(selector-mobile.svg) no-repeat;
+        }
+        .column-shloka {
+          width: 100%;
+          top: 40%;
+        }
+        #shloka-cont {
+          width: 80%;
+        }
+
+        #arth-cont {
+          width:  80%;
+        }
+        .column-arth {
+          width: 100%;
+          top: 70%;
+        }
+}
