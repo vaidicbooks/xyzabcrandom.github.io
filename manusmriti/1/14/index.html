@@ -1,0 +1,103 @@
+<html>
+      <head>
+      	    <title>मनुस्मृति - वैदिक पुस्तकें</title>
+      	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="UTF-8">
+            <script src="../../jquery.min.js"></script>
+            <script src="../../bootstrap.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="../../style-base.css">
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+      </head>
+
+
+      <body bgcolor="#FFF5DA">
+            <div class="row">
+            	<div class="column0">
+                  <div class="container">
+                    <div id="adhyay-select">
+                      <select name="अध्याय" id="अध्याय" class="box1">
+                         <option value="">अध्याय चुने</option>
+                      </select>
+                    </div>
+                    <div id="shlok-select">
+                      <select name="श्लोक" id="श्लोक" onchange="location = this.value;" class="box2">
+                        <option value="">श्लोक चुने</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+               <div class="column1">
+                   <div><a href="../../../"><p id="name"><strong>मनुस्मृति - वैदिक पुस्तकें</strong></p></a></div>
+               </div>
+
+               <div class="column-shloka">
+                   <button id="shloka-cont"><p>उद्बबर्हात्मनश्चैव मनः सदसदात्मकम्। मनसश्चाप्यहंकारं अभिमन्तारं ईश्वरम्।। 1/14</p></button>
+               </div>
+
+               <div class="column-arth">
+                   <button id="arth-cont"><p>(च) और फिर उस परमात्मा ने (आत्मनः एव) अपने आश्रय से अथवा स्वाश्रयस्थित प्रकृति से ही (सद् - असद् - आत्मकम) जो कारणरूप में विद्यमान रहे और विकारी अंश से कार्यरूप में जो अविद्यमान रहे, ऐसे स्वभाव वाले (मत्) ‘महत्’ नामक तत्त्व को (च) और (मनसः अपि) महत्तत्त्व से (अभिमन्तारम्) ‘मैं हूँ’ ऐसा अभिमान करने वाले (ईश्वरम) सामथ्र्यशाली (अंहकारम्) ‘अहंकार’ नामक तत्त्व को (च) और फिर उससे (सर्वाणि त्रिगुणानि) सब त्रिगुणात्मक पांच तन्मात्राओं - शब्द, स्पर्श, रूप, रस, गन्ध को (च) तथा (आत्मानं एव महान्तम्) आत्मोपकारक अथवा निरन्तरगमनशील ‘मन’ इन्द्रिय को (च) और (विषयाणां ग्रहीतणि) विषयों को ग्रहण करने वाली (पंच्चेन्द्रियाणि) दोनों वर्गों की पांचों ज्ञानेन्द्रियों - आंख, नाक, कान, जिह्वा , त्वचा एवं कर्मेन्द्रियों - हाथ, पैर, वाक्, उपस्थ, पायु को (२।८९-९२) (शनैः) यथाक्रम से (उद्बबर्ह) उत्पन्न कर प्रकट किया ।</p></button>
+               </div>
+            </div>
+            <div style="position:absolute;bottom:-200;padding-bottom:30px;width:100%">
+            <a href="../13"><button id="control"><strong>पूर्व श्लोक</strong></button></a>
+            <a href="../15"><button id="control" style="position:absolute;right:20"><strong>उत्तर श्लोक</strong></button></a>
+            </div>
+            <script>
+$(document).ready(function(){
+
+  load_json_data('अध्याय');
+
+  function load_json_data(id, parent_id)
+  {
+    var html_code = '';
+    $.getJSON("../../adhyay_shloka.json", function(data){
+
+      html_code += '<option value="">'+id+' चुनें</option>';
+      $.each(data, function(key, value){
+        if(id == 'अध्याय')
+        {
+          if(value.parent_id == '0')
+          {
+            html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+          }
+        }
+        else
+        {
+          if(value.parent_id == parent_id)
+          {
+            html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+          }
+        }
+      });
+      $('#'+id).html(html_code);
+    });
+
+  }
+
+  $(document).on('change', '#अध्याय', function(){
+    var अध्याय_id = $(this).val();
+    if(अध्याय_id != '')
+    {
+      load_json_data('श्लोक', अध्याय_id);
+    }
+    else
+    {
+      $('#श्लोक').html('<option value="">श्लोक चुनें</option>');
+      $('#city').html('<option value="">Select city</option>');
+    }
+  });
+  $(document).on('change', '#श्लोक', function(){
+    var श्लोक_id = $(this).val();
+    if(श्लोक_id != '')
+    {
+      load_json_data('city', श्लोक_id);
+    }
+    else
+    {
+      $('#city').html('<option value="">Select city</option>');
+    }
+  });
+});
+</script>
+      </body>
+<html>

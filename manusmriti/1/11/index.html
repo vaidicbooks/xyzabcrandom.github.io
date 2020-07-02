@@ -1,0 +1,103 @@
+<html>
+      <head>
+      	    <title>मनुस्मृति - वैदिक पुस्तकें</title>
+      	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="UTF-8">
+            <script src="../../jquery.min.js"></script>
+            <script src="../../bootstrap.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="../../style-base.css">
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+      </head>
+
+
+      <body bgcolor="#FFF5DA">
+            <div class="row">
+            	<div class="column0">
+                  <div class="container">
+                    <div id="adhyay-select">
+                      <select name="अध्याय" id="अध्याय" class="box1">
+                         <option value="">अध्याय चुने</option>
+                      </select>
+                    </div>
+                    <div id="shlok-select">
+                      <select name="श्लोक" id="श्लोक" onchange="location = this.value;" class="box2">
+                        <option value="">श्लोक चुने</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+               <div class="column1">
+                   <div><a href="../../../"><p id="name"><strong>मनुस्मृति - वैदिक पुस्तकें</strong></p></a></div>
+               </div>
+
+               <div class="column-shloka">
+                   <button id="shloka-cont"><p>यत्तत्कारणं अव्यक्तं नित्यं सदसदात्मकम्। तद्विसृष्टः स पुरुषो लोके ब्रह्मेति कीर्त्यते।। 1/11</p></button>
+               </div>
+
+               <div class="column-arth">
+                   <button id="arth-cont"><p>यह श्लोक प्रक्षिप्त है अतः मूल मनुस्मृति का भाग नहीं है क्योंकि ईश्वर छिपा हुआ नहीं है सब सृष्टि ही प्रत्यक्ष इसका प्रमाण है।  <br>अर्थ - जो परमात्मा जगत् का उपादान है और छिपा हुआ है और नित्य सत्-असत् का कत्र्ता है, उसने जिस मनुष्य को संसार में सबसे पहिले चारों वेदों का ज्ञाता उत्पन्न किया, उसी को सब लोग ’ब्रह्मा’ कहते हैं।</p></button>
+               </div>
+            </div>
+            <div style="position:absolute;bottom:-200;padding-bottom:30px;width:100%">
+            <a href="../10"><button id="control"><strong>पूर्व श्लोक</strong></button></a>
+            <a href="../12"><button id="control" style="position:absolute;right:20"><strong>उत्तर श्लोक</strong></button></a>
+            </div>
+            <script>
+$(document).ready(function(){
+
+  load_json_data('अध्याय');
+
+  function load_json_data(id, parent_id)
+  {
+    var html_code = '';
+    $.getJSON("../../adhyay_shloka.json", function(data){
+
+      html_code += '<option value="">'+id+' चुनें</option>';
+      $.each(data, function(key, value){
+        if(id == 'अध्याय')
+        {
+          if(value.parent_id == '0')
+          {
+            html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+          }
+        }
+        else
+        {
+          if(value.parent_id == parent_id)
+          {
+            html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+          }
+        }
+      });
+      $('#'+id).html(html_code);
+    });
+
+  }
+
+  $(document).on('change', '#अध्याय', function(){
+    var अध्याय_id = $(this).val();
+    if(अध्याय_id != '')
+    {
+      load_json_data('श्लोक', अध्याय_id);
+    }
+    else
+    {
+      $('#श्लोक').html('<option value="">श्लोक चुनें</option>');
+      $('#city').html('<option value="">Select city</option>');
+    }
+  });
+  $(document).on('change', '#श्लोक', function(){
+    var श्लोक_id = $(this).val();
+    if(श्लोक_id != '')
+    {
+      load_json_data('city', श्लोक_id);
+    }
+    else
+    {
+      $('#city').html('<option value="">Select city</option>');
+    }
+  });
+});
+</script>
+      </body>
+<html>

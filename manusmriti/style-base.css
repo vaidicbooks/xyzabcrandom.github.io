@@ -108,7 +108,7 @@ display: none;
 .column-arth {
 	width: 100%;
 	position: absolute;
-	top: 80%;
+	top: 105%;
 }
 #arth-cont {
 	margin: 0;
@@ -124,6 +124,19 @@ display: none;
     padding: 10px 20px;
     font-size: 20px;
     font-family: NotoSans;
+}
+
+#control {
+  padding-left: 23px;
+  padding-top: 10px;
+  padding-right: 23px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  border: 1px solid teal;
+  border-radius: 12px;
+  background: teal;
+  color: white;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 500px) {
