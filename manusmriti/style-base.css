@@ -175,7 +175,7 @@ display: none;
         }
         .column-shloka {
           width: 100%;
-          top: 40%;
+          top: 50%;
         }
         #shloka-cont {
           width: 80%;
@@ -186,6 +186,6 @@ display: none;
         }
         .column-arth {
           width: 100%;
-          top: 70%;
+          top: 80%;
         }
 }

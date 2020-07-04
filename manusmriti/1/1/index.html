@@ -13,17 +13,8 @@
       <body bgcolor="#FFF5DA">
             <div class="row">
             	<div class="column0">
-                  <div class="container">
-                    <div id="adhyay-select">
-                      <select name="अध्याय" id="अध्याय" class="box1">
-                         <option value="">अध्याय चुने</option>
-                      </select>
-                    </div>
-                    <div id="shlok-select">
-                      <select name="श्लोक" id="श्लोक" onchange="location = this.value;" class="box2">
-                        <option value="">श्लोक चुने</option>
-                      </select>
-                    </div>
+                  <div class="container" style="width:100%">
+                   <iframe src="../../selector.html" style="width:100%;height:100%;border:0px"></iframe> 
                   </div>
                 </div>
                <div class="column1">
@@ -38,63 +29,5 @@
                    <button id="arth-cont">(महर्षयः) महर्षि लोग( एकाग्रम् आसीनम्) एकाग्रतापूर्वक बैठे हुए (मनुम्) मनु के (अभिगम्य) पास जाकर, और उनका (यथान्यायम् )यथोचित (प्रतिपूज्य) सत्कार करके (इदम् )यह (वचनम्) वचन (अब्रुवन्) बोले । महर्षियों का मनु से वर्णाश्रम धर्मों के विषय में प्रश्न - </button>
                </div>
             </div>
-
-            <script>
-$(document).ready(function(){
-
-  load_json_data('अध्याय');
-
-  function load_json_data(id, parent_id)
-  {
-    var html_code = '';
-    $.getJSON("../../adhyay_shloka.json", function(data){
-
-      html_code += '<option value="">'+id+' चुनें</option>';
-      $.each(data, function(key, value){
-        if(id == 'अध्याय')
-        {
-          if(value.parent_id == '0')
-          {
-            html_code += '<option value="'+value.id+'">'+value.name+'</option>';
-          }
-        }
-        else
-        {
-          if(value.parent_id == parent_id)
-          {
-            html_code += '<option value="'+value.id+'">'+value.name+'</option>';
-          }
-        }
-      });
-      $('#'+id).html(html_code);
-    });
-
-  }
-
-  $(document).on('change', '#अध्याय', function(){
-    var अध्याय_id = $(this).val();
-    if(अध्याय_id != '')
-    {
-      load_json_data('श्लोक', अध्याय_id);
-    }
-    else
-    {
-      $('#श्लोक').html('<option value="">श्लोक चुनें</option>');
-      $('#city').html('<option value="">Select city</option>');
-    }
-  });
-  $(document).on('change', '#श्लोक', function(){
-    var श्लोक_id = $(this).val();
-    if(श्लोक_id != '')
-    {
-      load_json_data('city', श्लोक_id);
-    }
-    else
-    {
-      $('#city').html('<option value="">Select city</option>');
-    }
-  });
-});
-</script>
       </body>
 <html>
