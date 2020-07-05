@@ -110,7 +110,7 @@ $(document).ready(function(){
   function load_json_data(id, parent_id)
   {
     var html_code = '';
-    $.getJSON("../../adhyay_shloka.json", function(data){
+    $.getJSON("adhyay_shloka.json", function(data){
 
       html_code += '<option value="">'+id+' चुनें</option>';
       $.each(data, function(key, value){
