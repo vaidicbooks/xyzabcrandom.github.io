@@ -11,7 +11,7 @@
     <option value="">अध्याय चुने</option>
    </select>
    <br />
-   <select name="श्लोक" id="श्लोक" class="form-control input-lg">
+   <select name="श्लोक" id="श्लोक" class="form-control input-lg" onchange="if (this.value) location = this.value">
     <option value="">श्लोक चुने</option>
    </select>
       </div>
@@ -66,12 +66,6 @@ $(document).ready(function(){
       load_json_data('city', श्लोक_id);
     }
   });
-});
-
-$(document).on('अध्याय', '#श्लोक', () => {
-    var अध्याय = $("#अध्याय").val();
-    var श्लोक = $("#श्लोक").val();
-    window.location.href = `${अध्याय}/${श्लोक}.html`;
 });
 </script>
   </body>
