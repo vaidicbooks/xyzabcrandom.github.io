@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>select</title>
+    <script src="select.js"></script>
+  </head>
+
+  <body>
+    <select id="master">
+       <option selected>Select Master</option>
+       <option onclick="slave1()">1</option>
+       <option onclick="slave2()">2</option>
+    </select>
+
+    <select id="slave" onclick="redirect()">
+    	<option selected>Select[SLAVE]</option>
+    </select>
+  </body>
+
+</html>

@@ -1,0 +1,228 @@
+body {
+	margin: 0;
+	margin-bottom: 20px;
+	background: #fbfbfd;
+}
+.header {
+	width: 100%;
+	height: 120px;
+	background-color: #000000;
+}
+
+.intro-button {
+	position: relative;
+	right: -85%;
+	bottom: 81px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -flex;
+	width: 100px;
+	height: 40px;
+	border-top: 0px;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	padding-top: 10px !important;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 9px;
+    background-color: #FF9F7E;
+    text-align: center;
+}
+
+.intro-button:hover {
+	cursor: pointer;
+	background-color: #ffffff;
+}
+
+.logo {
+	height: 110px;
+	width: 110px;
+	position: relative;
+	left: 10%;
+	bottom:155px;
+}
+
+.adarsh {
+	height: 35px;
+	width: 70%;
+	position: relative;
+	bottom: 70px;
+	left: 50px;
+	border-top-width: 0.5px;
+	border-right-width: 0.5px;
+	border-left-width: 0.5px;
+	border-bottom-width: 0.5px;
+	border-style: solid;
+	border-color : #cccccc;
+	text-align: center;
+	padding-bottom: 15px;
+	color: red;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	font-family:'Asar';
+	font-weight:bold
+}
+
+.social-instagram {
+	height: 50px;
+	width: 50px;
+	border-top-width: 0.5px;
+	border-right-width: 0.5px;
+	border-left-width: 0.5px;
+	border-bottom-width: 0.5px;
+	border-style: solid;
+	border-color : #cccccc;
+	border-radius: 17px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: relative;
+	left: 89%;
+	bottom: 120px;
+	margin: 0;
+}
+
+.dropdown {
+	height: 230px !important;
+	width: 280px !important;
+	border-style: solid !important;
+	border-color: #cccccc !important;
+	border-opacity: 0.51 !important;
+	border-width: 0.5px !important;
+	position: relative !important;
+	left: 50px !important;
+	box-shadow: 0px 0.2px !important;
+	word-wrap: break-word !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+}
+#shlok-sel-txt {
+	width: 300px !important;
+	height: 40px !important;
+	position: relative !important;
+	left: -10px !important;
+	border-top-width: 0px !important;
+	border-right-width: 0px !important;
+	border-left-width: 0px !important;
+	border-bottom-width: 0.5px !important;
+	border-style: solid !important;
+	border-color : #cccccc !important;
+	text-align: center !important;
+}
+
+.content {
+   height: 150px;
+   width: 800px;
+   border-style: solid;
+   border-color: red;
+   border-right-width: 2px;
+   border-left-width: 2px;
+   border-bottom-width: 2px;
+   border-top-width: 8px;
+   position: relative;
+   bottom: 225px;
+   left: 450px;
+   word-wrap: break-word;
+   padding-left: 10px;
+   padding-right: 10px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   text-align: center;
+   font-family: 'Glegoo';
+}
+
+.arth {
+	
+	min-height: 150px;
+	width: 800px;
+	border-style: solid;
+	border-color: #ff9933;
+	border-top-width: 8px;
+	border-left-width: 2px;
+	border-right-width: 2px;
+    position: relative;
+	left: 450px;
+	bottom: 75px;
+	word-wrap: break-word;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+	font-family: 'Glegoo';
+}
+
+.footer {
+	width: 100%;
+	height: 8%;
+	bottom: 0;
+    background-color: red;
+    opacity: 0.7;
+    text-align: center;
+    padding-top: 15px;
+    color: #fbfbfd;
+}
+
+@media screen and (max-width: 991px) {
+	.intro-button {
+		right: -80%;
+	}
+
+	.dropdown {
+	    width: 200px;
+	    top: 50px;
+	}
+	#shlok-sel-txt {
+		width: 220px;
+	}
+
+	.content {
+		width: 400px;
+		bottom: 182px;
+		left: 300px;
+	}
+
+	.arth {
+		width:400px;
+		bottom: 50px;
+		left: 300px; 
+	}
+
+}
+
+@media screen and (max-width: 479px) {
+    .intro-button {
+    	right: -65%;
+    }
+
+    .adarsh {
+    	height: 50px;
+    }
+
+    .dropdown {
+		bottom: 92px;
+		left: 69px;
+	}
+
+	.content {
+		left: 30px;
+		top: 110px;
+		width: 290px;
+		min-height: 150px;
+	}
+
+	.social-instagram {
+		display: none;
+	}
+
+	.arth {
+		width: 290px;
+		min-height: 150px;
+		left: 30px;
+		bottom: -200px;
+	}
+
+	.footer {
+		margin-top: 300px;
+	}
+
+}

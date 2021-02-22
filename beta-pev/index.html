@@ -1,0 +1,148 @@
+<html>
+   <head>
+      <title>Sankhya Goes Here - Name Goes Here - Wensite Name</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <!-- Meta Tags: Ends :::: Styles&Scripts:  Starts !-->
+      <script src="basic.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <!-- Styles&Scripts: Ends ::::  Font Linkage: Starts !-->
+     <link href="https://fonts.googleapis.com/css2?family=Asar" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Glegoo" rel="stylesheet"> 
+       <!-- Font Linkage: Ends ::::  Head-Script: Starts !-->
+     <script>
+      function fire() {
+         var name = document.getElementById("श्लोक").value;
+          if (name == "") {
+           alert("Enter the ID#")
+            } else {
+             window.location = "https://vedicbooks.cf/manusmriti/" + name;
+             }
+        }
+     </script>
+       
+
+       <!-- Here Starts: SEO TOOLS ::: Here Starts: SEO TOOLS ::: Here Starts: SEO TOOLS ::: Here Starts: SEO TOOLS ::: Here Starts: SEO TOOLS-->
+
+       <!-- Here Ends: SEO TOOLS ::: Here Ends: SEO TOOLS ::: Here Ends: SEO TOOLS ::: Here Ends: SEO TOOLS ::: Here Ends: SEO TOOLS ::: !-->
+   </head>
+
+   <body>
+       <header class="header">
+
+       </header>
+
+       <a href="">
+         <button class="intro-button" style="text-decoration:none">
+             <b id="name-txt" style="position:relative;top:25%;font-family:'Asar'">मनुस्मृति</b>
+         </button>
+       </a>
+
+       <a href="">
+          <img src="logo.svg" class="logo">
+       </a>
+
+       <div class="adarsh">
+           <p><b><i>"सत्यं स्वाध्यायप्रवचने।"</i> ~ सत्याचार से सत्यविद्याओं को पढ़ें वा पढ़ावें</b></p>
+       </div>
+
+       <div class="social-instagram">
+           <a href="https://www.instagram.com/amadhurkant" target="_blank"><img src="instagram.svg"></a>
+       </div>
+
+       <div class="dropdown">
+        <div id="shlok-sel-txt" style="font-family:'Asar';font-weight:bold">
+           <p>श्लोक चुनें.... </p>
+        </div>
+
+        <div>
+          <select name="अध्याय" id="अध्याय" style="position:relative;top:18px;left:5%;width:90%;height:40px;font-family:'Asar';font-weight:bold">
+               <option value""><b>अध्याय चुनें</b></option>
+          </select>
+        </div>
+
+        <div>
+          <select name="श्लोक" id="श्लोक" style="position:relative;top:60px;left:5%;width:90%;height:40px;;font-family:'Asar';font-weight:bold" onChange="fire()">
+               <option value""><b>श्लोक चुनें</b></option>
+          </select>
+        </div>
+        </div>
+
+       </div>
+
+       <div class="content">
+          
+       </div>
+
+       <div class="arth">
+           
+       </div>
+
+       <div class="footer">
+          <p><b>© Vedic Pustaken 2020-21. All Right Reserved</b></p>
+       </div>
+
+<!-- Seperate Section For Embedded JavaScript Code :Starts !-->
+<script>
+$(document).ready(function(){
+
+  load_json_data('अध्याय');
+
+  function load_json_data(id, parent_id)
+  {
+    var html_code = '';
+    $.getJSON("adhyay_shloka.json", function(data){
+
+      html_code += '<option value="">'+id+' चुनें</option>';
+      $.each(data, function(key, value){
+        if(id == 'अध्याय')
+        {
+          if(value.parent_id == '0')
+          {
+            html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+          }
+        }
+        else
+        {
+          if(value.parent_id == parent_id)
+          {
+            html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+          }
+        }
+      });
+      $('#'+id).html(html_code);
+    });
+
+  }
+
+  $(document).on('change', '#अध्याय', function(){
+    var अध्याय_id = $(this).val();
+    if(अध्याय_id != '')
+    {
+      load_json_data('श्लोक', अध्याय_id);
+    }
+    else
+    {
+      $('#श्लोक').html('<option value="">श्लोक चुनें</option>');
+      $('#city').html('<option value="">Select city</option>');
+    }
+  });
+  $(document).on('change', '#श्लोक', function(){
+    var श्लोक_id = $(this).val();
+    if(श्लोक_id != '')
+    {
+      load_json_data('city', श्लोक_id);
+    }
+    else
+    {
+      $('#city').html('<option value="">Select city</option>');
+    }
+  });
+});
+</script>
+<!-- Seperate Section For Embedded JavaScript Code :Ends !-->
+   </body>
+
+</html>
