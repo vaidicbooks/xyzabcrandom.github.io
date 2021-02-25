@@ -10,57 +10,7 @@
 	width:90%;
 }
 
-#ved-jpg {
-	position: relative;
-	min-width: 100px;
-	max-width: 200px;
-	min-height: 100px;
-	max-height: 200px;
-	width: 100%;
-	height: 100%; 
-}
-
-#upnishat-jpg {
-	position: relative;
-	min-width: 100px;
-	max-width: 200px;
-	min-height: 100px;
-	max-height: 200px;
-	width: 100%;
-	height: 100%; 
-}
-
-#smriti-jpg {
-	position: relative;
-	min-width: 100px;
-	max-width: 200px;
-	min-height: 100px;
-	max-height: 200px;
-	width: 100%;
-	height: 100%; 
-}
-
-#darshan-jpg {
-	position: relative;
-	min-width: 100px;
-	max-width: 200px;
-	min-height: 100px;
-	max-height: 200px;
-	width: 100%;
-	height: 100%; 
-}
-
-#sanskrat-jpg {
-	position: relative;
-	min-width: 100px;
-	max-width: 200px;
-	min-height: 100px;
-	max-height: 200px;
-	width: 100%;
-	height: 100%; 
-}
-
-#anya-jpg {
+#jpg-view-desk {
 	position: relative;
 	min-width: 100px;
 	max-width: 200px;
