@@ -60,12 +60,16 @@ a {
 	#jpg-view-mob {
 		visibility: visible;
 		position: relative;
-		min-width: 200px;
-		max-width: 200px;
-		min-height: 200px;
-		max-height: 200px;
+		min-width: 100px;
+		max-width: 100px;
+		min-height: 100px;
+		max-height: 100px;
 		width: 100%;
 		height: 100%;
+	}
+
+	#jpg-view-desk {
+		visibility: hidden;
 	}
 
 	#font-mob {
