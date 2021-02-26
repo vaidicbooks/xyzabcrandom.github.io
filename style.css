@@ -46,6 +46,7 @@ a {
 @media screen and (max-width: 991px) {
 	.desk {
 		visibility: hidden;
+		overflow: hidden;
 	}
 
 	.mob {
