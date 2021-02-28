@@ -15,12 +15,12 @@
     <!-- JavaScript Linking : Starts-->
     <script type="text/javascript">
         function fire() {
-            var name = document.getElementById("select").value;
-            if (name="") {
-                alert("चुनें")
+         var name = document.getElementById("select").value;
+          if (name == "home") {
+           window.location = "https://vedicbooks.cf/smriti/atrismriti"
             } else {
-                window.location = "https://vedicbooks.cf/smriti/atrismriti/" +name;
-            }
+             window.location = "https://vedicbooks.cf/smriti/atrismriti/" + name;
+             }
         }
     </script>
     <!-- Javascript Linking : Ends-->
@@ -39,8 +39,7 @@
     	</div>
     	<div>
             <select class="select-1" id="select" onChange="fire()"> <!-- Had to choose class in order to have same id for both tablet and dektop to make fire() function work-->
-                <option selected>चुनें</option>
-                <option value=""><b>भूमिका (आवश्यक)</b></option>
+                <option selected value="home"><b>भूमिका (आवश्यक)</b></option>
                 <option value="1">श्लोक 1-100</option>
                 <option value="101">श्लोक 101-200</option>
                 <option value="201">श्लोक 201-300</option>
@@ -57,8 +56,7 @@
     	</div>
     	<div>
             <select class="select-1-tab" id="select" onChange="fire()">
-                <option selected>चुनें</option>
-                <option value=""><b>भूमिका (आवश्यक)</b></option>
+                <option value="home"><b>भूमिका (आवश्यक)</b></option>
                 <option value="1">श्लोक 1-100</option>
                 <option value="101">श्लोक 101-200</option>
                 <option value="201">श्लोक 201-300</option>
