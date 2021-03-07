@@ -1,8 +1,8 @@
-        function fire() {
-            var name = document.getElementById("select").value;
-            if (name="") {
-                alert("चुनें")
-            } else {
-                window.location = "https://vedicbooks.cf/upnishad/isha/" +name;
-            }
+function fire() {
+  var page = document.getElementById('select').value;
+    if (page == "") {
+        window.location = "https://vedicbooks.cf/upnishad/isha"      
+     } else {
+         window.location= "https://vedicbooks.cf/upnishad/isha/" +page;     
         }
+}
