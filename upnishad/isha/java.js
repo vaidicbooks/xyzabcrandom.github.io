@@ -3,6 +3,6 @@ function fire() {
     if (page == "") {
         window.location = "https://vedicbooks.cf/upnishad/isha"      
      } else {
-         window.location= "https://vedicbooks.cf/upnishad/isha/" +page;     
+         window.location= "https://"+url+"/upnishad/isha/" +page;     
         }
 }
